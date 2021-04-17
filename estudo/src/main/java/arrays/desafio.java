@@ -19,7 +19,8 @@ public class desafio {
         for (double d : notas) {
             media += d;
         }
-
         System.out.println(media/qtdNotas);
+
+        entrada.close();
     }
 }
