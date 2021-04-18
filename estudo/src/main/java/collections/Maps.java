@@ -11,6 +11,5 @@ public class Maps {
         usuarios.put(1, "Joao");
 
         System.out.println(usuarios.entrySet());
-
     }
 }
