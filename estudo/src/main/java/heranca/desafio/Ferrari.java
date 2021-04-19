@@ -10,6 +10,6 @@ public class Ferrari extends Carro {
         if(aceleracao == Aceleracao.NORMAL)
             this.velocidadeAtual += 10;
         else if(aceleracao == Aceleracao.FORTE)
-            this.velocidadeAtual += 15;
+        this.velocidadeAtual += 15;
     }
 }
