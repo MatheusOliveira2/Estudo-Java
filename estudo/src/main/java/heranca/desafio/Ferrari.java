@@ -1,6 +1,9 @@
 package heranca.desafio;
 
-public class Ferrari extends Carro {
+public class Ferrari extends Carro implements Esportivo {
+
+
+    private int delta = 10;
     public Ferrari(){
         super();
     }
@@ -8,8 +11,18 @@ public class Ferrari extends Carro {
     @Override
     public void acelerar(Aceleracao aceleracao){
         if(aceleracao == Aceleracao.NORMAL)
-            this.velocidadeAtual += 10;
+            this.velocidadeAtual += delta;
         else if(aceleracao == Aceleracao.FORTE)
-        this.velocidadeAtual += 15;
+        this.velocidadeAtual += delta + 10;
+    }
+
+    @Override
+    public void ligarTurbo(){
+        this.delta += 10;
+    }
+
+    @Override
+    public void desligarTurbo(){
+        this.delta -= 10;
     }
 }
