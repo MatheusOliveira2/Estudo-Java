@@ -17,5 +17,14 @@ public class Foreach {
 
         // Method Reference
         aprovados.forEach(System.out::println);
+
+
+        aprovados.forEach(nome -> meuImprimir(nome));
+        
+        aprovados.forEach(Foreach::meuImprimir);
+    }
+
+    static void meuImprimir(String nome){
+        System.out.println(nome);
     }
 }
