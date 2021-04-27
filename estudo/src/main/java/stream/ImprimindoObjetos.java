@@ -3,6 +3,7 @@ package stream;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ImprimindoObjetos {
     public static void main(String[] args) {
@@ -17,6 +18,9 @@ public class ImprimindoObjetos {
         while(it.hasNext()){
             System.out.println(it.next());
         }
+
+        Stream<String> st = aprovados.stream();
+        st.forEach(System.out::println);
     }
 
 }
