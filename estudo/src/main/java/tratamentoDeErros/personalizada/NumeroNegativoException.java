@@ -1,6 +1,6 @@
 package tratamentoDeErros.personalizada;
 
-public class NumeroNegativoException extends RuntimeException {
+public class NumeroNegativoException extends Exception {
 
     private String nomeDoAtributo;
 
