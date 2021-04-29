@@ -10,13 +10,16 @@ public class ChecadaAndNaoChecada {
         }
 
         System.out.println("Fim!!");
+
+        Aluno aluno = new Aluno("Matheus");
+        aluno.metodo1();
     }
 
     static void geraErro1(){
        throw new RuntimeException("Errei");
     }
 
-    static void geraErro2() throws Exception{
+    static void geraErro2() throws Exception {
        throw new Exception("Errei - 2");
     }
 
