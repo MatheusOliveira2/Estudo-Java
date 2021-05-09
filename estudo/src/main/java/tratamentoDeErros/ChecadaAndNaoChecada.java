@@ -6,7 +6,6 @@ public class ChecadaAndNaoChecada {
             geraErro1();
             geraErro2(); 
         } catch (Exception e) {
-            //TODO: handle exception
         }
 
         System.out.println("Fim!!");
