@@ -12,5 +12,6 @@ public class GetUser {
         User user = em.find(User.class, 1L);
         System.out.println(user.getName());
         em.close();
+        emf.close();
     }
 }

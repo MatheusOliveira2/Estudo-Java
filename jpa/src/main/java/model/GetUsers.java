@@ -1,16 +1,27 @@
 package model;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
 
 public class GetUsers {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa");
         EntityManager em = emf.createEntityManager();
 
-        User user = em.find(User.class, 1L);
-        System.out.println(user.getName());
+        String jpql = "select u from User u";
+        TypedQuery<User> query = em.createQuery(jpql, User.class);
+        query.setMaxResults(5);
+
+        List<User> users = query.getResultList();
+
+        users.forEach(user -> System.out.println(user.getName()));
+        //System.out.println(user.getName());
         em.close();
+        emf.close();
     }
 }
